@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
 
 * {
@@ -217,13 +217,13 @@ header {
     border: 3px solid var(--color1);
 }
 
-.center-header-box-container button:hover{
+.center-header-box-container button:hover {
     color: var(--color1);
     background: none;
 }
 
 /*.....................................................image box...................................*/
-.header-image-box{
+.header-image-box {
     display: flex;
     align-items: center;
     margin: 5px 10px;
@@ -231,7 +231,110 @@ header {
     justify-content: space-between;
 }
 
-.header-image-box__container img{
+.header-image-box__container img {
     width: 100%;
     cursor: pointer;
 }
+
+/*.................................................................section sellers..........................................................................*/
+.section-sellers {
+    width: 100%;
+    font-size: 1em;
+    padding: 1px;
+}
+
+.sellers {
+    width: 96%;
+    margin: 50px 10px 20px 10px;
+}
+
+.sellers-tittle {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    padding: 1em 0em;
+}
+
+.sellers-tittle::after {
+    content: "";
+    display: block;
+    background-color: rgb(22, 22, 22);
+    height: 1px;
+    width: 8%;
+    margin: 8px 46%;
+}
+
+/*...................................................................*/
+.sellers-products {
+    width: 100%;
+    font-size: 1em;
+}
+
+.sellers-products-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sellers-products__container {
+    display: flex;
+    width: 50%;
+}
+
+.sellers-products__box {
+    margin: 5px;
+    width: 50%;
+    border: 1px solid rgba(204, 204, 204, 0.925);
+    cursor: pointer;
+}
+
+.sellers-products__box--img img {
+    width: 100%;
+}
+
+#seller--kind-of-product>a {
+    color: var(--color5);
+    text-decoration: none;
+}
+
+#seller--discribe-of-product>a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+#seller--discribe-of-product {
+    margin-bottom: 10px;
+    height: 2em;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+#seller--kind-of-product {
+    font-size: 0.6em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#sellers-products__box--text {
+    margin: 20px 0px 40px 0px;
+    font-size: 0.8em;
+    height: 2em;
+    text-align: center;
+}
+
+/*................................................................... looped image .......................................................................*/
+.section-looped-image {
+    width: 100%;
+    border-bottom: var(--color5);
+}
+
+.looped-image {
+    width: 96%;
+    margin: 5px 10px 50px 15px;
+    cursor: pointer;
+}
+.looped-image img{
+  width: 99%;
+}
+/*.............................................................section-options..........................................................................*/
