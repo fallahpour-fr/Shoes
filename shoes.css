@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -14,6 +17,8 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     display: block;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
 }
 
 body {
@@ -29,4 +34,204 @@ body {
 .row {
     max-width: 1320px;
     margin: 0 auto;
+}
+
+:root {
+    --color1: black;
+    --color2: white;
+    --color3: rgb(240, 99, 17);
+    --color4: #0be881;
+    --color5: rgb(177, 177, 177);
+    --transition: 0.5s;
+    --line-height: 23px;
+}
+
+/*.................................................................................header.............................................................................*/
+header {
+    width: 100%;
+    font-size: 1em;
+}
+
+/*................................................................navbar........................................................*/
+.navbar {
+    width: 100%;
+}
+
+.navbar-conection {
+    width: 100%;
+    background-color: var(--color1);
+    display: flex;
+    color: var(--color2);
+    justify-content: space-between;
+    font-size: 0.5em;
+    align-items: center;
+    padding: 1em 70px;
+    text-transform: uppercase;
+}
+
+.navbar-conection__item a {
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.navbar-conection__item {
+    margin: 0px 5px;
+}
+
+.navbar-menu {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    border-bottom: 1px solid var(--color5);
+}
+
+
+.navbar-menu-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-menu_link {
+    font-size: 0.6em;
+    font-weight: 700;
+    list-style-type: none;
+    display: flex;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.navbar-menu_logo {
+    filter: grayscale(0%) opacity(100%);
+    margin-right: 5px;
+    transition: var(--transition);
+}
+
+.navbar-menu_logo:hover {
+    filter: grayscale(10%) opacity(70%);
+}
+
+.navbar-menu_link__item {
+    margin: 0px 15px;
+    transition: var(--transition);
+}
+
+.navbar-menu_link__item i {
+    font-size: 0.9em;
+}
+
+.navbar-menu_link__item:hover {
+    color: var(--color3);
+}
+
+/*.......................................................................*/
+.navbar-menu__connect {
+    margin: 0px 10px;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.navbar-menu__connect--line {
+    color: var(--color5);
+}
+
+.navbar-menu__connect--bag {
+    padding: 0.15em 0.4em;
+    border: 2px solid black;
+    position: relative;
+    margin-left: 10px;
+    transition: var(--transition);
+}
+
+.navbar-menu__connect--bag::after {
+    content: "";
+    display: inline-block;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 0.15em 0.3em;
+    position: absolute;
+    bottom: 1.3em;
+    right: 0.25em;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    transition: var(--transition);
+}
+
+.navbar-menu__connect--bag:hover {
+    background-color: var(--color3);
+    color: var(--color2);
+}
+
+.navbar-menu__connect--bag:hover::after {
+    border-color: var(--color3);
+}
+
+.navbar-menu__connect--bag:hover {
+    border-color: var(--color3);
+}
+
+.navbar-menu-hover:hover {
+    color: var(--color3);
+    transition: var(--transition);
+}
+
+/*................................................text box..............................................*/
+.header-text-box {
+    padding: 1px;
+    width: 96%;
+    font-size: 1em;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0.363)), url(./img/hero-bg.jpg);
+    margin: 50px 10px 20px 10px;
+    background-color: aquamarine;
+}
+
+.center-header-box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10em 0em;
+}
+
+.center-header-box-container h1 {
+    color: var(--color1);
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.center-header-box-container button {
+    border: none;
+    padding: 1em 3.5em;
+    background-color: var(--color1);
+    color: var(--color2);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.6em;
+    transition: var(--transition);
+    border: 3px solid var(--color1);
+}
+
+.center-header-box-container button:hover{
+    color: var(--color1);
+    background: none;
+}
+
+/*.....................................................image box...................................*/
+.header-image-box{
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+    width: 96%;
+    justify-content: space-between;
+}
+
+.header-image-box__container img{
+    width: 100%;
+    cursor: pointer;
 }
