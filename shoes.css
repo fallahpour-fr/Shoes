@@ -42,7 +42,7 @@ body {
     --color3: rgb(240, 99, 17);
     --color4: #0be881;
     --color5: rgb(177, 177, 177);
-    --color6: rgba(236, 236, 236, 0.925);
+    --color6: #f1f0f0;
     --transition: 0.5s;
     --line-height: 23px;
 }
@@ -376,6 +376,117 @@ header {
     border-radius: 1.3em;
 }
 
-/*.............................................................. footer.....................................................................*/
+/*.............................................................. footer part one.....................................................................*/
+.footer-part-one {
+    width: 100%;
+    padding: 1px;
+    background-color: var(--color6);
+}
 
-/*.............................................................. footer.....................................................................*/
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    padding: 1.5em 0em;
+}
+
+.footer-container {
+    font-size: 0.7em;
+}
+
+.Ways-of-communication {
+    list-style-type: none;
+    line-height: 2em;
+}
+
+.Ways-of-communication__titlle {
+    margin-bottom: 20px;
+    font-size: 0.8em;
+}
+
+.Ways-of-communication__link a::before {
+    content: "";
+    display: inline-block;
+    padding: 0.55em;
+    border-radius: 1em;
+    margin-right: 5px;
+    border: 3px solid var(--color5);
+    zoom: 0.5;
+    margin-right: 20px;
+}
+
+.line {
+    margin-right: 16px;
+    color: var(--color3);
+    font-size: 1em;
+}
+
+.Ways-of-communication__link {
+    font-size: 0.85em;
+}
+
+.Ways-of-communication__link a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.address{
+    display: inline-flex;
+    align-items: center;
+   
+}
+
+.Ways-of-communication__link--address{
+    line-height: 1.3em;
+    margin-left: 10px;
+}
+
+.Ways-of-communication__link--icons{
+    color: var(--color3);
+    padding: 0.6em;
+    border: 1px solid var(--color5);
+    font-size: 1.2em;
+}
+.Ways-of-communication__link__social-media{
+    list-style-type: none;   
+    margin-top: 20px;
+}
+.Ways-of-communication__link__social-media li{
+    padding: 0.9em;
+    border-radius: 1.5em;
+    margin: 2px;
+    display: inline-block;
+    border: 1px solid var(--color5);
+}
+.Ways-of-communication__link__social-media a{
+    color:var(--color5);
+}
+
+/*.............................................................. footer part two.....................................................................*/
+.footer-part-two{
+    width: 100%;
+    background-color: var(--color1);
+    color: var(--color2);
+    font-size: 0.5em;
+    display: flex;
+    padding: 1.5em 5em;
+    justify-content: space-between;
+}
+
+.footer-part-two__link{
+    list-style-type: none;
+}
+.footer-part-two__link li{
+  display: inline-block;
+}
+
+.footer-part-two__link a{
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.footer-part-two__link a:hover{
+color: var(--color3);
+transition: var(--transition);
+}
