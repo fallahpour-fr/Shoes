@@ -42,6 +42,7 @@ body {
     --color3: rgb(240, 99, 17);
     --color4: #0be881;
     --color5: rgb(177, 177, 177);
+    --color6: rgba(236, 236, 236, 0.925);
     --transition: 0.5s;
     --line-height: 23px;
 }
@@ -285,7 +286,7 @@ header {
 .sellers-products__box {
     margin: 5px;
     width: 50%;
-    border: 1px solid rgba(204, 204, 204, 0.925);
+    border: 1px solid var(--color6);
     cursor: pointer;
 }
 
@@ -334,7 +335,47 @@ header {
     margin: 5px 10px 50px 15px;
     cursor: pointer;
 }
-.looped-image img{
-  width: 99%;
+
+.looped-image img {
+    width: 99%;
 }
+
 /*.............................................................section-options..........................................................................*/
+.section-options {
+    width: 100%;
+    border-top: 1px solid var(--color6);
+}
+
+.options {
+    width: 96%;
+    margin: 5px 10px 50px 15px;
+    display: flex;
+    justify-content: center;
+    padding: 1em 0em;
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+}
+
+.options-box {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.options-box__text {
+    margin-left: 10px;
+    font-size: 0.5em;
+}
+
+.options-box__icons {
+    background-color: var(--color6);
+    padding: 0.6em;
+    border-radius: 1.3em;
+}
+
+/*.............................................................. footer.....................................................................*/
+
+/*.............................................................. footer.....................................................................*/
