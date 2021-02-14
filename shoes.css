@@ -45,6 +45,27 @@ body {
     --color6: #f1f0f0;
     --transition: 0.5s;
     --line-height: 23px;
+
+    --socialmedia: {
+        animation-name: thumb;
+        animation-duration: 700ms;
+        transform-origin: 50% 50%;
+        animation-iteration-count: 1;
+        animation-timing-function: unset;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+    }
+
+    @-webkit-keyframes thumb {
+        form {
+            transform: scale(0);
+        }
+
+        to {
+            transform: scale(0.7);
+        }
+    }
+
 }
 
 /*.................................................................................header.............................................................................*/
@@ -424,6 +445,11 @@ header {
 
 .Ways-of-communication__link {
     font-size: 0.85em;
+    transition: var(--transition);
+}
+
+.Ways-of-communication__link:hover {
+    transform: translate(12px, 0px);
 }
 
 .Ways-of-communication__link a {
@@ -431,40 +457,80 @@ header {
     color: var(--color1);
 }
 
-.address{
-    display: inline-flex;
-    align-items: center;
-   
+.Ways-of-communication__link a:hover {
+    color: var(--color3);
 }
 
-.Ways-of-communication__link--address{
+.Ways-of-communication__address {
+    display: inline-flex;
+    align-items: center;
+}
+
+.Ways-of-communication__link--address {
     line-height: 1.3em;
     margin-left: 10px;
 }
 
-.Ways-of-communication__link--icons{
+.Ways-of-communication__link--icons {
     color: var(--color3);
     padding: 0.6em;
     border: 1px solid var(--color5);
     font-size: 1.2em;
 }
-.Ways-of-communication__link__social-media{
-    list-style-type: none;   
+
+.Ways-of-communication__link__social-media {
+    list-style-type: none;
     margin-top: 20px;
 }
-.Ways-of-communication__link__social-media li{
-    padding: 0.9em;
+
+.Ways-of-communication__link__social-media--icon {
+    width: 50px;
+    height: 50px;
     border-radius: 1.5em;
     margin: 2px;
     display: inline-block;
     border: 1px solid var(--color5);
-}
-.Ways-of-communication__link__social-media a{
-    color:var(--color5);
+    color: var(--color5);
+    transition: var(--transition);
+    cursor: pointer;
+    vertical-align: baseline;
 }
 
+.Ways-of-communication__link__social-media--icon i {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.Ways-of-communication__link__social-media--icon:hover {
+    transform: scale(0.7);
+}
+
+#twitter:hover{
+    border: 1px solid rgb(0, 195, 255);
+    color: rgb(0, 195, 255);
+}
+
+#facebook:hover{
+    border: 1px solid rgb(11, 0, 170);
+    color: rgb(11, 0, 170);
+}
+
+#instagram:hover{
+    border: 1px solid rgb(0, 88, 170);
+    color: rgb(0, 88, 170);
+}
+
+#google:hover{
+    border: 1px solid var(--color3);
+    color: var(--color3);
+}
+
+#youtube:hover{
+    border: 1px solid rgb(170, 0, 0);
+    color: rgb(170, 0, 0);
+}
 /*.............................................................. footer part two.....................................................................*/
-.footer-part-two{
+.footer-part-two {
     width: 100%;
     background-color: var(--color1);
     color: var(--color2);
@@ -474,19 +540,20 @@ header {
     justify-content: space-between;
 }
 
-.footer-part-two__link{
+.footer-part-two__link {
     list-style-type: none;
 }
-.footer-part-two__link li{
-  display: inline-block;
+
+.footer-part-two__link li {
+    display: inline-block;
 }
 
-.footer-part-two__link a{
+.footer-part-two__link a {
     text-decoration: none;
     color: var(--color2);
 }
 
-.footer-part-two__link a:hover{
-color: var(--color3);
-transition: var(--transition);
+.footer-part-two__link a:hover {
+    color: var(--color3);
+    transition: var(--transition);
 }
