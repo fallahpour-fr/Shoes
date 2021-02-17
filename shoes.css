@@ -43,7 +43,7 @@ body {
     --color1: black;
     --color2: white;
     --color3: rgb(240, 99, 17);
-    --color4: #0be881;
+    --color4: #0aa85e;
     --color5: rgb(177, 177, 177);
     --color6: #f1f0f0;
     --transition: 0.5s;
@@ -71,6 +71,10 @@ header {
     align-items: center;
     padding: 1em 70px;
     text-transform: uppercase;
+}
+
+.navbar-conection__item--differentcolor{
+    color: rgb(151, 150, 150);
 }
 
 .navbar-conection__item a {
@@ -106,6 +110,86 @@ header {
     text-transform: uppercase;
     transition: var(--transition);
 }
+
+/*..................................................................*/
+.navbar-menu-link-hover-shop {
+    display: none;
+}
+
+.navbar-menu_link-hover {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em;
+}
+
+.shopping {
+    width: 24%;
+}
+
+.shopping img {
+    width: 100%;
+    height: 355px;
+}
+
+.shopping-text {
+    font-size: 0.7em;
+    border-right: 1px solid var(--color5);
+
+}
+
+.shopping_list {
+    list-style-type: none;
+}
+
+.shopping_titlle {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.shopping_titlle::after {
+    content: "";
+    display: block;
+    background-color: var(--color1);
+    width: 80px;
+    height: 2px;
+    margin-top: 10px;
+}
+
+.shopping_list {
+    margin-top: 20px;
+    line-height: 1.7em;
+}
+
+.shopping_list_items {
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.shopping_list_items:hover {
+    color: var(--color3);
+}
+
+.shopping_footer {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    border-bottom: 1px solid var(--color1);
+    margin-right: 160px;
+}
+
+.shopping_footer:hover {
+    color: var(--color3);
+    border-bottom: 1px solid var(--color3);
+}
+
+#shoes:hover .navbar-menu-link-hover-shop {
+    display: inline-block;
+}
+
+/*.................................................................*/
 
 .navbar-menu_logo {
     filter: grayscale(0%) opacity(100%);
@@ -182,6 +266,10 @@ header {
     transition: var(--transition);
 }
 
+.navbar_menu {
+    display: none;
+}
+
 /*................................................text box..............................................*/
 .header-text-box {
     padding: 1px;
@@ -191,7 +279,6 @@ header {
     background-repeat: no-repeat;
     background-image: linear-gradient(rgba(255, 255, 255, 0.342), rgba(255, 255, 255, 0.363)), url(./img/hero-bg.jpg);
     margin: 50px 10px 20px 10px;
-    background-color: aquamarine;
 }
 
 .center-header-box-container {
@@ -207,6 +294,7 @@ header {
     font-size: 2.5em;
     font-weight: bolder;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .center-header-box-container button {
@@ -238,6 +326,7 @@ header {
 .header-image-box__container img {
     width: 100%;
     cursor: pointer;
+    margin: 10px 0px;
 }
 
 /*.................................................................section sellers..........................................................................*/
@@ -269,7 +358,8 @@ header {
 }
 
 /*...................................................................*/
-/* .sellers-products {
+
+.sellers-products {
     width: 100%;
     font-size: 1em;
 }
@@ -284,71 +374,11 @@ header {
 .sellers-products__container {
     display: flex;
     width: 50%;
-}
-
-.sellers-products__box {
-    margin: 5px;
-    width: 50%;
-    border: 1px solid var(--color6);
-    cursor: pointer;
-}
-
-.sellers-products__box--img img {
-    width: 100%;
-}
-
-#seller--kind-of-product>a {
-    color: var(--color5);
-    text-decoration: none;
-}
-
-#seller--discribe-of-product>a {
-    color: var(--color1);
-    text-decoration: none;
-}
-
-#seller--discribe-of-product {
-    margin-bottom: 10px;
-    height: 2em;
-    font-size: 0.7em;
-    text-align: center;
-}
-
-#seller--kind-of-product {
-    font-size: 0.6em;
-    text-align: center;
-    margin-top: 10px;
-}
-
-#sellers-products__box--text {
-    margin: 20px 0px 40px 0px;
-    font-size: 0.8em;
-    height: 2em;
-    text-align: center;
-} */
-
-
-.sellers-products {
-    width: 100%;
-    font-size: 1em;
-}
-
-.sellers-products-boxes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
- .sellers-products__container {
-    display: flex;
-    width: 50%;
     background-color: blueviolet;
-} 
+}
 
 .sellers-products__container-component {
     display: flex;
-    background-color: brown;
     position: relative;
     z-index: 2;
 }
@@ -402,7 +432,7 @@ header {
     position: absolute;
     display: none;
     border: none;
-    width: 306px;
+    width: 96%;
     height: 40px;
     background-color: var(--color3);
     color: var(--color2);
@@ -425,13 +455,19 @@ header {
 
 .slideOutRight-img {
     padding: 10px;
+    display: block;
 }
 
 .slideOutRight-img img {
     width: 80px;
     height: 80px;
-    border: 1.5px solid var(--color3);
     cursor: pointer;
+    padding: 2px;
+
+}
+
+.slideOutRight-img img:hover {
+    border: 1.5px solid var(--color3);
 }
 
 .sellers-products__box {
@@ -461,41 +497,43 @@ header {
 
 @keyframes icon-one {
     0% {
-        left: 300px;
+        right: -10;
         opacity: 0;
     }
 
     50% {
-        left: 290px;
+        right: 0;
         opacity: 0;
     }
 
     100% {
-        left: 250px;
+        right: 6;
         opacity: 1;
     }
 }
 
 @keyframes icon-two {
+
+
     0% {
-        left: 300px;
+        right: -10;
         opacity: 0;
     }
 
     50% {
-        left: 290px;
+        right: 0;
         opacity: 0;
     }
 
     100% {
-        left: 250px;
+        right: 6;
         opacity: 1;
     }
 }
 
 
 .icons {
-
+    right: 16;
     font-size: 1em;
     padding-top: 20px;
     list-style-type: none;
@@ -513,6 +551,7 @@ header {
 .icon-one {
     opacity: 0;
     transition: var(--transition);
+
 }
 
 .icon-one:hover {
@@ -543,6 +582,11 @@ header {
 #seller--kind-of-product>a {
     color: var(--color5);
     text-decoration: none;
+    transition: var(--transition);
+}
+
+#seller--kind-of-product>a:hover {
+    color: var(--color3);
 }
 
 #seller--discribe-of-product>a {
@@ -568,6 +612,7 @@ header {
     font-size: 0.8em;
     height: 2em;
     text-align: center;
+    color: var(--color4);
 }
 
 /*................................................................... looped image .......................................................................*/
@@ -608,11 +653,12 @@ header {
 .options-box {
     display: flex;
     align-items: center;
-    margin: 0px 30px;
+    margin: 10px 30px;
 }
 
 .options-box__text {
     margin-left: 10px;
+    margin-top: 10px;
     font-size: 0.5em;
 }
 
@@ -630,15 +676,22 @@ header {
 }
 
 .footer {
+    display: flex;    
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     font-size: 1em;
-    padding: 1.5em 0em;
+    padding: 1.5em 0em;  
+}
+
+.footer-container-overaly{
+    display: flex;   
+    width: 50%;
+    margin: 2px;
 }
 
 .footer-container {
-    font-size: 0.7em;
+    font-size: 0.7em; 
+    width: 50%;
+    margin: 10px;
 }
 
 .Ways-of-communication {
@@ -730,30 +783,31 @@ header {
     transform: scale(0.7);
 }
 
-#twitter:hover{
+#twitter:hover {
     border: 1px solid rgb(0, 195, 255);
     color: rgb(0, 195, 255);
 }
 
-#facebook:hover{
+#facebook:hover {
     border: 1px solid rgb(11, 0, 170);
     color: rgb(11, 0, 170);
 }
 
-#instagram:hover{
+#instagram:hover {
     border: 1px solid rgb(0, 88, 170);
     color: rgb(0, 88, 170);
 }
 
-#google:hover{
+#google:hover {
     border: 1px solid var(--color3);
     color: var(--color3);
 }
 
-#youtube:hover{
+#youtube:hover {
     border: 1px solid rgb(170, 0, 0);
     color: rgb(170, 0, 0);
 }
+
 /*.............................................................. footer part two.....................................................................*/
 .footer-part-two {
     width: 100%;
@@ -763,10 +817,16 @@ header {
     display: flex;
     padding: 1.5em 5em;
     justify-content: space-between;
+    line-height: 25px;
+}
+
+.footer-part-two__text{
+    text-align: center;
 }
 
 .footer-part-two__link {
     list-style-type: none;
+    text-align: center;
 }
 
 .footer-part-two__link li {
