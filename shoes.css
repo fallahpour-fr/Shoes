@@ -84,16 +84,16 @@ header {
 
 .navbar-conection__item {
     margin: 0px 5px;
+    
 }
-
+/*.................................................................................*/
 .navbar-menu {
     font-size: 0.8em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em 4em;
     border-bottom: 1px solid var(--color5);
-    position: relative;
+    padding: 0em 5em;
 }
 
 
@@ -112,16 +112,29 @@ header {
     transition: var(--transition);
 }
 
+.navbar-menu_link__item {
+    margin: 0px 15px;
+    transition: var(--transition);
+    padding: 2em 0em;
+}
+
+.navbar-menu_link__item i {
+    font-size: 0.9em;
+}
+
+.navbar-menu_link__item:hover {
+    color: var(--color3);
+}
+
 /*..................................................................*/
 .navbar-menu-link-hover-shop {
     width: 90%;
     position: absolute;
-    top: 70px;
+    top: 100px;
     left: 80px;
     background-color: var(--color2);
     border-top: 4px solid var(--color3);
-    z-index: 2;
-    opacity: 0;
+    display: none;
 }
 
 .navbar-menu_link-hover {
@@ -152,13 +165,11 @@ header {
     top: 140px;
     color: var(--color2);
     text-align: center;
-
 }
 
 .shopping-text {
     font-size: 1.2em;
     border-right: 1px solid var(--color5);
-
 }
 
 .shopping_list {
@@ -200,7 +211,7 @@ header {
     cursor: pointer;
     transition: var(--transition);
     border-bottom: 1px solid var(--color1);
-    margin-right: 160px;
+    width: 50%;
 }
 
 .shopping_footer:hover {
@@ -208,12 +219,13 @@ header {
     border-bottom: 1px solid var(--color3);
 }
 
-#shoes {    
+
+#shoes {
     transition: var(--transition);
 }
 
-#shoes:hover+.navbar-menu-link-hover-shop {
-   opacity: 1;
+#shoes:hover .navbar-menu-link-hover-shop {
+    display:block;
 }
 
 /*.................................................................*/
@@ -228,18 +240,7 @@ header {
     filter: grayscale(10%) opacity(70%);
 }
 
-.navbar-menu_link__item {
-    margin: 0px 15px;
-    transition: var(--transition);
-}
 
-.navbar-menu_link__item i {
-    font-size: 0.9em;
-}
-
-.navbar-menu_link__item:hover {
-    color: var(--color3);
-}
 
 /*.......................................................................*/
 .navbar-menu__connect {
@@ -404,7 +405,7 @@ header {
 }
 
 .sellers-products__container-component {
-    display: flex;   
+    display: flex;
     width: 50%;
     margin: 10px;
     border: 1px solid var(--color6);
@@ -431,7 +432,7 @@ header {
     cursor: pointer;
     /* transform: translateY(0%); */
     position: absolute;
-    
+
 }
 
 .btn:hover {
@@ -439,7 +440,7 @@ header {
 }
 
 .sellers-products__container-component:hover .btn {
-    transform: translateY(-130%);           
+    transform: translateY(-130%);
 }
 
 
@@ -515,14 +516,14 @@ header {
 
 .sellers-products__box {
     width: 100%;
-    margin:5px;
+    margin: 5px;
     cursor: pointer;
     position: relative;
 }
 
 
 .sellers-products__box--img {
-    margin-top: 10px;   
+    margin-top: 10px;
 }
 
 .sellers-products__box--img img {
@@ -557,17 +558,39 @@ header {
     height: 2em;
     font-size: 0.7em;
     text-align: center;
+    text-transform: capitalize;
 }
 
 #seller--kind-of-product {
     font-size: 0.6em;
     text-align: center;
     margin-top: 10px;
+    text-transform: capitalize;
 }
 
 #sellers-products__box--text {
     font-size: 0.8em;
     text-align: center;
+    color:var(--color4);
+}
+
+#sellers-products__box--text--gray{
+    color: var(--color5);
+    text-decoration: line-through;
+    font-size: 0.8em;
+}
+
+.sellers-products__box--img--off{
+    position: absolute;
+    background-color: var(--color4);
+    color: var(--color2);
+    opacity: 0.7;
+    padding: 16px 7px;
+    border-radius: 50%;
+    z-index: 1;
+    font-size: 0.6em;
+    left: 40;
+    top: 20;
 }
 
 /*................................................................... looped image .......................................................................*/
@@ -615,6 +638,7 @@ header {
     margin-left: 10px;
     margin-top: 10px;
     font-size: 0.5em;
+    text-transform: uppercase;
 }
 
 .options-box__icons {
@@ -635,6 +659,7 @@ header {
     width: 100%;
     font-size: 1em;
     padding: 1.5em 0em;
+    text-transform: capitalize;
 }
 
 .footer-container-overaly {
@@ -657,6 +682,7 @@ header {
 .Ways-of-communication__titlle {
     margin-bottom: 20px;
     font-size: 0.8em;
+    
 }
 
 .Ways-of-communication__link a::before {
